@@ -1,16 +1,18 @@
 import React from 'react'
-import { NotifyContext } from './ButtonContext'
+import addNotification from 'react-push-notification'
+
+import { NotifyContext } from './NotifyContext'
 
 export const NotifyProvider = ({children}) => {
 
   const clickToNotify = () => {
     addNotification({
-      title: 'Technical test',
-      message: 'can see the tech test in the repo',
+      title: 'Technical Test Project',
+      message: 'More details about the Technical test and other projects in the repo',
       duration: 3000,
+      icon: '../assets/icon',
+      onClick: () => window.location ="https://github.com/pantacha/tech-test",
       native: true,
-      onClick: 
-      
     })
   }
 

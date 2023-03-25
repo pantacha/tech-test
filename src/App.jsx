@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useContext, useState } from 'react'
+import { ButtonComponent } from './components/ButtonComponent'
+import { NotifyContext } from './context';
 
 function App() {
+
+  const { clickToNotify } = useContext(NotifyContext);
 
   return (
     
@@ -14,12 +15,13 @@ function App() {
             <h1>App Screen</h1>
             <hr />
 
-            <ButtonComponent />
+            <ButtonComponent clickToNotify={clickToNotify} />
+
           </div>
         </div>
       </div>
     </>
-    
+
   )
 }
 
