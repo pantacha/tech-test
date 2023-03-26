@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 import { NotifyContext } from '../context/'
 
 export const ButtonComponent = ({ clickToNotify }) => {
@@ -14,4 +15,8 @@ export const ButtonComponent = ({ clickToNotify }) => {
 
   )
 
+}
+
+ButtonComponent.propTypes = {
+  clickToNotify: PropTypes.func.isRequired
 }
